@@ -319,7 +319,6 @@
         <div class="project-tags">${p.tags.map(makeTag).join('')}</div>
         <div class="project-actions">
           <a class="btn btn-outline" target="_blank" rel="noreferrer noopener" href="${p.links.code}">View Code ↗</a>
-          ${p.links.demo ? `<a class="btn btn-primary" target="_blank" rel="noreferrer noopener" href="${p.links.demo}">Live Demo ↗</a>` : `<button class="btn btn-disabled" disabled title="No live demo yet">No Demo</button>`}
         </div>
       </article>`;
     grid.innerHTML = projects.map(makeCard).join('');
