@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sudipta Sanyal — Portfolio</title>
+  <meta name="description" content="Portfolio of Sudipta Sanyal — Aspiring Software Engineer (Java, Python, C). Projects: Credit Card Fraud Detection, Java GUI Calculator." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Mobile top bar -->
+  <div class="mobilebar">
+    <div class="container inner">
+      <div class="brand" aria-label="Brand">
+        <div class="logo" aria-hidden="true">SS</div>
+        <span>Sudipta Sanyal</span>
+      </div>
+      <div>
+        <button class="iconbtn" id="themeToggleMobile" aria-label="Toggle theme">🌓</button>
+        <button class="iconbtn hamburger" id="menuBtn" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+    <div class="container drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Mobile Menu">
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a href="https://www.linkedin.com/in/sudipta-sanyal-3b430536a/" target="_blank" rel="noreferrer noopener">LinkedIn ↗</a>
+        <a href="https://github.com/SudiptaSanyal12" target="_blank" rel="noreferrer noopener">GitHub ↗</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Desktop header -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">SS</div>
+        <span>Sudipta Sanyal</span>
+      </div>
+      <nav class="navlinks" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a href="https://www.linkedin.com/in/sudipta-sanyal-3b430536a/" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn">LinkedIn</a>
+        <a href="https://github.com/SudiptaSanyal12" target="_blank" rel="noreferrer noopener" aria-label="GitHub">GitHub</a>
+        <button class="iconbtn" id="themeToggle" aria-label="Toggle theme">🌓</button>
+      </nav>
+      <button class="iconbtn hamburger" id="menuBtnDesk" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text reveal">
+            <p class="badge" aria-label="Role">Aspiring Software Engineer</p>
+            <h1>Hi, I'm <span class="highlight">Sudipta Sanyal</span> 👋</h1>
+            <p class="hero-description">Java, Python & C practitioner who enjoys building reliable, performant applications. I'm exploring data-driven solutions and UI polish while learning best practices in software engineering.</p>
+            <div class="tech-stack" aria-label="Tech stack">
+              <span class="tech-chip">Java</span>
+              <span class="tech-chip">Python</span>
+              <span class="tech-chip">C</span>
+              <span class="tech-chip">HTML</span>
+              <span class="tech-chip">CSS</span>
+              <span class="tech-chip">JavaScript</span>
+              <span class="tech-chip">Git</span>
+            </div>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#about">View Projects</a>
+              <a class="btn btn-secondary" href="#contact">Contact Me</a>
+              <a class="btn btn-outline" href="sudipta.docx" download>Download Resume</a>
+            </div>
+          </div>
+          <div class="hero-image reveal">
+            <div class="profile-photo-container">
+              <img src="sudipta.png" alt="Sudipta Sanyal - Professional Photo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">Passionate developer crafting innovative solutions</p>
+        </div>
+        
+        <div class="about-content">
+          <div class="about-text-section reveal">
+            <p class="about-description">I'm a budding developer focused on practical, scalable solutions. Recent work includes a <strong>Credit Card Fraud Detection</strong> project and a <strong>Java GUI Calculator</strong>. I value readable code, small iterations, and continuous learning. Open to internships and collaborative projects.</p>
+          </div>
+          
+          <div class="about-stats-section reveal">
+            <div class="about-stats">
+              <div class="stat-card">
+                <div class="stat-number">2</div>
+                <div class="stat-label">Projects</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">3+</div>
+                <div class="stat-label">Languages</div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">Some of my recent work</p>
+        </div>
+        
+        <div class="projects-grid" id="projectGrid"></div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Skills & Expertise</h2>
+          <p class="section-subtitle">Technologies and concepts I work with</p>
+        </div>
+        
+        <div class="skills-content">
+          <div class="skills-category reveal">
+            <h3 class="category-title">Programming Languages</h3>
+            <div class="skills-grid">
+              <span class="skill-item">Java</span>
+              <span class="skill-item">Python</span>
+              <span class="skill-item">C</span>
+            </div>
+          </div>
+          
+          <div class="skills-category reveal">
+            <h3 class="category-title">Web Technologies</h3>
+            <div class="skills-grid">
+              <span class="skill-item">HTML</span>
+              <span class="skill-item">CSS</span>
+              <span class="skill-item">JavaScript</span>
+            </div>
+          </div>
+          
+          <div class="skills-category reveal">
+            <h3 class="category-title">Core Concepts</h3>
+            <div class="skills-grid">
+              <span class="skill-item">Object-Oriented Design</span>
+              <span class="skill-item">Data Structures & Algorithms</span>
+              <span class="skill-item">Problem Solving</span>
+            </div>
+          </div>
+          
+          <div class="skills-category reveal">
+            <h3 class="category-title">Tools & Version Control</h3>
+            <div class="skills-grid">
+              <span class="skill-item">Git & GitHub</span>
+              <span class="skill-item">VS Code</span>
+              <span class="skill-item">Command Line</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">Let's discuss opportunities and collaborations</p>
+        </div>
+        
+          <div class="contact-content">
+           <div class="contact-card reveal">
+             <div class="contact-icon">📧</div>
+             <h3>Email</h3>
+             <p>Ready to discuss opportunities? Drop me a line!</p>
+             <a href="mailto:sudipta.sanyal2004@gmail.com" class="contact-link">
+               sudipta.sanyal2004@gmail.com
+             </a>
+           </div>
+           
+           <div class="contact-card reveal">
+             <div class="contact-icon">📱</div>
+             <h3>Phone</h3>
+             <p>Ready to discuss opportunities?</p>
+             <a href="tel:+919339222713" class="contact-link">
+               (+91) 9339222713
+             </a>
+           </div>
+           
+           <div class="contact-card reveal">
+             <div class="contact-icon">💼</div>
+             <h3>LinkedIn</h3>
+             <p>Connect with me professionally and see my latest updates</p>
+             <a href="https://www.linkedin.com/in/sudipta-sanyal-3b430536a/" target="_blank" rel="noreferrer noopener" class="contact-link">
+               Click Here
+             </a>
+           </div>
+           
+           <div class="contact-card reveal">
+             <div class="contact-icon">🐙</div>
+             <h3>GitHub</h3>
+             <p>Check out my code and projects</p>
+             <a href="https://github.com/SudiptaSanyal12" target="_blank" rel="noreferrer noopener" class="contact-link">
+               Click Here
+             </a>
+           </div>
+         </div>
+        
+        <div class="contact-note-section reveal">
+          <div class="note-card">
+            <div class="note-icon">💡</div>
+            <div class="note-content">
+              <h4>Let's Collaborate!</h4>
+              <p>I'm always open to discussing new opportunities, internships, and collaborative projects. Feel free to reach out with details about timelines and project scope.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <span>© <span id="year"></span> Sudipta Sanyal. All rights reserved.</span>
+        <a href="#home" class="back-to-top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // --- Theme toggle ---
+    const root = document.documentElement;
+    const toggleBtns = [document.getElementById('themeToggle'), document.getElementById('themeToggleMobile')].filter(Boolean);
+    const THEME_KEY = 'ss-theme';
+    const applyTheme = (t) => {
+      if (!t || t === 'auto') {
+        root.removeAttribute('data-theme');
+      } else {
+        root.setAttribute('data-theme', t);
+      }
+    };
+    const savedTheme = localStorage.getItem(THEME_KEY);
+    applyTheme(savedTheme);
+    toggleBtns.forEach(btn => btn.addEventListener('click', () => {
+      const cur = localStorage.getItem(THEME_KEY) || 'auto';
+      const next = cur === 'dark' ? 'light' : cur === 'light' ? 'auto' : 'dark';
+      localStorage.setItem(THEME_KEY, next);
+      applyTheme(next);
+      btn.setAttribute('aria-live','polite');
+      btn.title = `Theme: ${next}`;
+    }));
+
+    // --- Mobile menu ---
+    const drawer = document.getElementById('drawer');
+    const menuBtns = [document.getElementById('menuBtn'), document.getElementById('menuBtnDesk')].filter(Boolean);
+    menuBtns.forEach(b => b.addEventListener('click', () => {
+      const isOpen = drawer.style.display === 'block';
+      drawer.style.display = isOpen ? 'none' : 'block';
+    }));
+    drawer?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => drawer.style.display = 'none'));
+
+    // --- Reveal on scroll ---
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+    }, { threshold: .2 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // --- Stats ---
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // --- Projects data ---
+    const projects = [
+      {
+        title: 'Credit Card Fraud Detection',
+        status: 'In Progress',
+        description: 'End-to-end ML pipeline to detect fraudulent transactions using feature engineering and model evaluation.',
+        tags: ['Python', 'Pandas', 'Scikit-learn', 'Imbalanced Data'],
+        links: {
+          code: 'https://github.com/SudiptaSanyal12',
+          demo: null
+        }
+      },
+      {
+        title: 'Java GUI Calculator',
+        status: 'Completed (Local)',
+        description: 'A desktop calculator with clean UI and basic arithmetic operations, built with Java Swing.',
+        tags: ['Java', 'Swing', 'OOP'],
+        links: {
+          code: 'https://github.com/SudiptaSanyal12',
+          demo: null
+        }
+      }
+    ];
+
+    const grid = document.getElementById('projectGrid');
+    const makeTag = t => `<span class="project-tag">${t}</span>`;
+    const makeCard = (p) => `
+      <article class="project-card" aria-label="Project: ${p.title}">
+        <div class="project-header">
+          <div class="project-status" title="Status">${p.status}</div>
+          <h3 class="project-title">${p.title}</h3>
+        </div>
+        <p class="project-description">${p.description}</p>
+        <div class="project-tags">${p.tags.map(makeTag).join('')}</div>
+        <div class="project-actions">
+          <a class="btn btn-outline" target="_blank" rel="noreferrer noopener" href="${p.links.code}">View Code ↗</a>
+          ${p.links.demo ? `<a class="btn btn-primary" target="_blank" rel="noreferrer noopener" href="${p.links.demo}">Live Demo ↗</a>` : `<button class="btn btn-disabled" disabled title="No live demo yet">No Demo</button>`}
+        </div>
+      </article>`;
+    grid.innerHTML = projects.map(makeCard).join('');
+
+
+
+    // --- Smooth scroll for internal links ---
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const id = a.getAttribute('href').slice(1);
+        const target = document.getElementById(id);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
